@@ -272,7 +272,7 @@ a {
 
 /* GALLERY */
 .gallery {
-  margin: 2rem 0;
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -330,5 +330,15 @@ a {
 
 .gallery .gallery-content img:hover {
   outline: 1rem solid green;
+  transform: scale(0.8);
   z-index: 2;
+}
+
+/* FOOTER */
+.footer {
+  background: #333;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1.5rem;
+  color: #fff;
 }
