@@ -210,6 +210,7 @@ a {
   height: 35rem;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .car-type .cards .card .card-page {
@@ -475,7 +476,7 @@ a {
   width: 100vw;
   z-index: 4;
   opacity: 0;
-  visibility: 0;
+  visibility: hidden;
   transition: all 0.3s;
 }
 
@@ -492,10 +493,12 @@ a {
   text-align: center;
   opacity: 0;
   visibility: hidden;
+  display: none;
   transition: all 0.3s 0.3s;
 }
 
 .toggle:checked ~ .menu-items .menu-item {
+  display: block;
   transform: scale(1) translate(-50%, -50%);
   opacity: 1;
   visibility: visible;
