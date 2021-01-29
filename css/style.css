@@ -17,6 +17,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -365,6 +366,25 @@ a {
   height: 100vh;
   background-color: rgba(51, 51, 51, 0.774);
   backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+#popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup .removePop {
+  text-align: end;
+  margin: 0 1rem;
+  font-size: 2.5rem;
+}
+
+#popup .removePop .close {
+  color: #fff;
+  padding: 1.5rem;
 }
 
 #popup .checkout {
@@ -387,17 +407,18 @@ a {
   font-size: 1.5rem;
   border: none;
   background: #ededed;
-  transition: all 0.2s;
   color: #333;
+  transition: all 0.5s;
 }
 
-#popup .checkout [class$="-input"]:focus {
+#popup .checkout input:focus {
   outline: none;
   border-bottom: 1px solid #333;
 }
 
 #popup .checkout .comment-input {
   height: 10rem;
+  resize: none;
 }
 
 #popup .checkout .comment-input:focus {

@@ -7,16 +7,16 @@
     <title>Car Rental | Home Page</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="Home">
         <div class="header-content">
             <div class="container">
                 <div class="head">
                     <nav class="nav-items">
                         <h1 class="logo">Cars</h1>
                         <ul class="nav-item">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#"> Car type</a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#PurchaseCar"> Car type</a></li>
+                            <li><a href="#Gallery">Gallery</a></li>
                             <li><a href="">Contact</a></li>
                         </ul>
                     </nav>
@@ -42,7 +42,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="car-type">
+        <section class="car-type" id="PurchaseCar">
             <div class="container">
                 <h2 class="l-heading animate">Checkout our cars</h2>
                 <div class="cards">
@@ -55,7 +55,7 @@
                         <div class="card-page back">
                             <div class="card-detail detail-back">
                                 <h2 class="amount">&dollar;30,000</h2>
-                                <a href="#" class="btn buy">Buy me</a>
+                                <a href="#popup" class="btn buy">Buy me</a>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <div class="card-page back">
                             <div class="card-detail detail-back">
                                 <h2 class="amount">&dollar;30,000</h2>
-                                <a href="#" class="btn buy">Buy me</a>
+                                <a href="#popup" class="btn buy">Buy me</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                         <div class="card-page back">
                             <div class="card-detail detail-back">
                                 <h2 class="amount">&dollar;30,000</h2>
-                                <a href="#" class="btn buy">Buy me</a>
+                                <a href="#popup" class="btn buy">Buy me</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="Gallery">
             <h2 class="l-heading animate">Gallery</h2>
             <div class="gallery-content">
                 <img src="img/gallery_h1.jpg" alt="gally1" class="gallery-1">
@@ -110,9 +110,11 @@
     </footer>
 
     <section id="popup">
+        <p class="removePop">
+            <a href="#PurchaseCar" class="close btn">X</a>
+        </p>
         <div class="container">
             <div class="checkout">
-                <!-- <h2 class="l-heading animate">Thank you for purchasing us</h2> -->
                 <div class="input name">
                     <input type="text" class="name-input">
                     <p class="info">Name</p>
