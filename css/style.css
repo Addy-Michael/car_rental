@@ -439,3 +439,88 @@ a {
   color: #fff;
   background: #333;
 }
+
+/* HUMBURGER MENU */
+.burger {
+  display: none;
+}
+
+.toggle {
+  display: none;
+}
+
+.menu {
+  width: 3rem;
+  background: red;
+  position: fixed;
+  z-index: 3;
+}
+
+.menu label {
+  width: 100%;
+  height: 100%;
+  background: #333;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-items {
+  background: rgba(51, 51, 51, 0.842);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  opacity: 0;
+  visibility: 0;
+  transition: all 0.3s;
+}
+
+.toggle:checked ~ .menu-items {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-items .menu-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0) translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s 0.3s;
+}
+
+.toggle:checked ~ .menu-items .menu-item {
+  transform: scale(1) translate(-50%, -50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-items .menu-item li {
+  width: 25rem;
+}
+
+.menu-items .menu-item li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.menu-items .menu-item li a {
+  display: inline-block;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  color: #fff;
+  width: 100%;
+  background: linear-gradient(135deg, #333 50%, #fff 50%);
+  background-size: 230%;
+  transition: all 0.5s;
+}
+
+.menu-items .menu-item li a:hover {
+  background-position: 100%;
+  color: #333;
+}
